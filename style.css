@@ -33,14 +33,24 @@ body{
 }
 
 header{
-    padding: 30px 50px;
+    padding: 35px 50px;
     background-color: var(--branco);
     display: flex;
     align-items: center;
     justify-content: space-between;
+ 
+}
 
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
 
-    
+    .nav-links a {
+        padding: 0 10px;
+    }
 }
 
 .logo{
@@ -66,7 +76,7 @@ header{
 .nav-links a::after{
     content: ' ';
     width: 0%;
-    height: 4px;
+    height: 3px;
     background-color: var(--azul-claro);
     position: absolute;
     bottom: 0;
@@ -74,20 +84,20 @@ header{
 }
 
 .nav-links a:hover::after{
-    width: 100%;
+    width: 70%;
     transition: .3s;
 }
 
 main {
-    max-width: 1200px;
-    min-width: 320px;
+    max-width: 1000px;
+    min-width: 300px;
     margin: auto;
-
     box-shadow: 1px 3px 20px 3px #00000029;
 }
 
-/* HERO */
 
+
+/* HERO */
 
 
 .scn-home{
@@ -97,11 +107,11 @@ main {
     color: var(--branco);
 }
 
-.scn-home h1{
+.scn-home h1 {
     font-size: 40px;
 }
 
-.scn-home p{
+.scn-home p {
     font-size: 20px;
     margin-bottom: 50px;
 }
@@ -114,8 +124,7 @@ main {
     background-image: radial-gradient(circle at bottom left, var(--azul-claro), #0b53b1 60%);
     border-radius: 10px;
     border: 2px solid none;
-    box-shadow: 0px 1px 10px 2px #06305a4b;    
-        
+    box-shadow: 0px 1px 10px 2px #06305a4b;  
     transition: .5s;
 }
 
@@ -144,12 +153,12 @@ main {
     gap: 2rem;
 
     max-width: 1200px;   /* 🔑 CHAVE */
-    margin: 0 auto;     /* 🔑 CENTRALIZA */
+    margin: 0 auto;      /* 🔑 CENTRALIZA */
 }
 
  .card-services {
     background-color: var(--branco);
-    padding-top: 0px 20px;
+    padding: 20px;
     text-align: center;
     box-shadow: 1px 3px 20px 3px #00000029;
     border-radius: 10px;
@@ -159,7 +168,7 @@ main {
     
 }  
 
-.card-services .tt  {
+.card-services .tt {
     width: 70%;
     margin: auto;
     border-bottom: 1px solid #00000029;
@@ -176,7 +185,6 @@ main {
 
 .card-services:hover {
     cursor: pointer;
-
     transform: translateY(-8px);
     box-shadow: 0 20px 50px #0000002f;
 }
@@ -263,7 +271,7 @@ footer {
 }
 
 .info-dev li:hover {
-    background-image: linear-gradient(to right, var(--azul-claro), transparent);
+    background-image: linear-gradient(to left, var(--azul-claro), transparent);
     
     
 }
